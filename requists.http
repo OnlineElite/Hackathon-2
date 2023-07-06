@@ -1,0 +1,10 @@
+post http://localhost:8080/register
+Content-Type: 'application/json'
+
+{
+  first_name: "jamal",
+  last_name: "boujbari",
+  email: "jamalboujbari@gmail.com",
+  username: "Jamal_Boujbari",
+  password: "1345678"
+}
