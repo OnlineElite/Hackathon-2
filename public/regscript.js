@@ -42,8 +42,8 @@ function handeleRegisterForm(){
             inputs.forEach((inp) => { registerData.push(inp.value) })
             
             const bodyData = {
-                first_name : registerData[0],
-                last_name : registerData[1],
+                firstname : registerData[0],
+                lastname : registerData[1],
                 email : registerData[2],
                 username : registerData[3],
                 password : registerData[4]

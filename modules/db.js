@@ -12,10 +12,11 @@ const db = knex({
 })
 
 function createUser({firstname,lastname,email,username,password}){
+  console.log(`im inserting into db this data: ${firstname} , ${lastname} , ${email}, ${username}, ${password}`)
   return db('users').insert( 
     {
-      firstname : firstname,
-      lastname : lastname,
+      first_name : firstname,
+      last_name : lastname,
       email : email,
       username : username,
       password : password

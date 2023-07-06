@@ -34,6 +34,8 @@ app.post('/register',(req,res)=>{
             res.send({message : "Hello this account is allready exsist"})
         }
         else{
+            console.log(`im sending from the server :`)
+            console.log(req.body)
             DB.createUser(req.body)
             .then(data => {
                 res.sendStatus = 200;
