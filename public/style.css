@@ -62,6 +62,41 @@
     color: black;
 }
 
+.user{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 3px;
+}
+#userPhoto{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#userIndex{
+    color: rgb(250, 13, 53);
+    background-color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+}
+#userName{
+    width: fit-content;
+    height: fit-content;
+    padding-inline: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 /*=====================slider section===================*/
 #slider {
     background-image: url('images/wall1.jpg');

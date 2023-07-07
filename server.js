@@ -93,10 +93,10 @@ app.post('/login',(req,res)=>{
         .then(data => {
             console.log(data);
             if(data.length>0){
-            res.send({message:`Username: ${data[0].username}  |  User_id: ${data[0].user_id}`})
+            res.send({message:`Welcome back: ${data[0].username}  |  User_id: ${data[0].user_id}`, username: data[0].username, admission  : true})
             }
             else {
-            res.send({message : "Hello this account is not registred"})
+            res.send({message : "Hello this account is not registred", admission  : false})
             }
         })
         .catch(err => {

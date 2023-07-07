@@ -5,7 +5,7 @@ const foodItem = [
         category: 'Burger',
         rating: 4.3,
         price: 13,
-        img: '../public/images/slide-1.png',
+        img: 'images/slide-1.png',
         quantity: 1
     },
     {
@@ -14,7 +14,7 @@ const foodItem = [
         category: 'Burger',
         rating: 4.3,
         price: 15,
-        img: '../public/images/slide-1.png',
+        img: 'images/slide-1.png',
         quantity: 1
     },
     {
@@ -23,7 +23,7 @@ const foodItem = [
         category: 'Burger',
         rating: 4.3,
         price: 18,
-        img: '../public/images/slide-1.png',
+        img: 'images/slide-1.png',
         quantity: 1
     },
     {
@@ -32,7 +32,7 @@ const foodItem = [
         category: 'Burger',
         rating: 4.3,
         price: 15,
-        img: '../public/images/slide-1.png',
+        img: 'images/slide-1.png',
         quantity: 1
     },
     {
@@ -41,7 +41,7 @@ const foodItem = [
         category: 'Burger',
         rating: 4.3,
         price: 10,
-        img: '../public/images/slide-1.png',
+        img: 'images/slide-1.png',
         quantity: 1
     },
     {
@@ -50,7 +50,7 @@ const foodItem = [
         category: 'Burger',
         rating: 4.3,
         price: 12,
-        img: '../public/images/slide-1.png',
+        img: 'images/slide-1.png',
         quantity: 1
     },
     /*--------------------------------------------------------------------------*/
@@ -60,7 +60,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 11,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
     },
     {
@@ -69,7 +69,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 10,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
     },
     {
@@ -78,7 +78,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 14,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
     },
     {
@@ -87,7 +87,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 12,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
     },
     {
@@ -96,7 +96,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 17,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
     },
     {
@@ -105,7 +105,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 20,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
     },
     {
@@ -114,7 +114,7 @@ const foodItem = [
         category: 'chicken',
         rating: 4.3,
         price: 15,
-        img: '../public/images/slide-2.png',
+        img: 'images/slide-2.png',
         quantity: 1
         /*--------------------------------------------------------------------------*/
     },
@@ -124,7 +124,7 @@ const foodItem = [
         category: 'platter',
         rating: 4.3,
         price: 10,
-        img: '../public/images/slide-3.png',
+        img: 'images/slide-3.png',
         quantity: 1
     },
     {
@@ -133,7 +133,7 @@ const foodItem = [
         category: 'platter',
         rating: 4.3,
         price: 15,
-        img: '../public/images/slide-3.png',
+        img: 'images/slide-3.png',
         quantity: 1
 
     },
@@ -143,7 +143,7 @@ const foodItem = [
         category: 'platter',
         rating: 4.3,
         price: 12,
-        img: '../public/images/slide-3.png',
+        img: 'images/slide-3.png',
         quantity: 1
 
     },
@@ -153,7 +153,7 @@ const foodItem = [
         category: 'platter',
         rating: 4.3,
         price: 8,
-        img: '../public/images/slide-3.png',
+        img: 'images/slide-3.png',
         quantity: 1
     },
     {
@@ -162,7 +162,7 @@ const foodItem = [
         category: 'platter',
         rating: 4.3,
         price: 7,
-        img: '../public/images/slide-3.png',
+        img: 'images/slide-3.png',
         quantity: 1
     },
     /*--------------------------------------------------------------------------------*/
@@ -172,7 +172,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 8,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     {
@@ -181,7 +181,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 7,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     {
@@ -190,7 +190,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 5,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     {
@@ -199,7 +199,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 7,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     {
@@ -208,7 +208,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 10,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     {
@@ -217,7 +217,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 4,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     {
@@ -226,7 +226,7 @@ const foodItem = [
         category: 'vegetable',
         rating: 4.3,
         price: 4,
-        img: '../public/images/slideHamberger.png',
+        img: 'images/slideHamberger.png',
         quantity: 1
     },
     /*--------------------------------------------------------------------------*/
@@ -236,7 +236,7 @@ const foodItem = [
         category: 'pizza',
         rating: 4.3,
         price: 8,
-        img: '../public/images/slide-4.png',
+        img: 'images/slide-4.png',
         quantity: 1
     },
     {
@@ -245,7 +245,7 @@ const foodItem = [
         category: 'pizza',
         rating: 4.3,
         price: 7,
-        img: '../public/images/slide-4.png',
+        img: 'images/slide-4.png',
         quantity: 1
     },
     {
@@ -254,7 +254,7 @@ const foodItem = [
         category: 'pizza',
         rating: 4.3,
         price: 5,
-        img: '../public/images/slide-4.png',
+        img: 'images/slide-4.png',
         quantity: 1
     },
     {
@@ -263,7 +263,7 @@ const foodItem = [
         category: 'pizza',
         rating: 4.3,
         price: 16,
-        img: '../public/images/slide-4.png',
+        img: 'images/slide-4.png',
         quantity: 1
     },
     {
@@ -272,7 +272,7 @@ const foodItem = [
         category: 'pizza',
         rating: 4.3,
         price: 14,
-        img: '../public/images/slide-4.png',
+        img: 'images/slide-4.png',
         quantity: 1
     },
     {
@@ -281,7 +281,7 @@ const foodItem = [
         category: 'pizza',
         rating: 4.3,
         price: 10,
-        img: '../public/images/slide-4.png',
+        img: 'images/slide-4.png',
         quantity: 1
     },
     /*-----------------------------------------------------------------------*/
@@ -291,7 +291,7 @@ const foodItem = [
         category: 'kingsBurger',
         rating: 4.3,
         price: 18,
-        img: '../public/images/slideSalad.png',
+        img: 'images/slideSalad.png',
         quantity: 1
     },
     {
@@ -300,7 +300,7 @@ const foodItem = [
         category: 'kingsBurger',
         rating: 4.3,
         price: 20,
-        img: '../public/images/slideSalad.png',
+        img: 'images/slideSalad.png',
         quantity: 1
     },
     {
@@ -309,7 +309,7 @@ const foodItem = [
         category: 'kingsBurger',
         rating: 4.3,
         price: 18,
-        img: '../public/images/slideSalad.png',
+        img: 'images/slideSalad.png',
         quantity: 1
     },
     {
@@ -318,7 +318,7 @@ const foodItem = [
         category: 'kingsBurger',
         rating: 4.3,
         price: 20,
-        img: '../public/images/slideSalad.png',
+        img: 'images/slideSalad.png',
         quantity: 1
     },
     {
@@ -327,7 +327,7 @@ const foodItem = [
         category: 'kingsBurger',
         rating: 4.3,
         price: 18,
-        img: '../public/images/slideSalad.png',
+        img: 'images/slideSalad.png',
         quantity: 1
     },
     {
@@ -336,7 +336,7 @@ const foodItem = [
         category: 'kingsBurger',
         rating: 4.3,
         price: 20,
-        img: '../public/images/slideSalad.png',
+        img: 'images/slideSalad.png',
         quantity: 1
     },
 ]

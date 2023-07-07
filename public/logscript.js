@@ -53,8 +53,15 @@ function handeleLoginForm(){
                 .then((data) => {
                     console.log(data)
                     //document.getElementById('showLogin').textContent = `${data.message}` ;
-                    alert(`${data.message}`)
-                    //if user exsist open home page else open register page
+                    alert(`${data.message} ${data.admission}`)
+                    if(data.admission == true){
+                        window.open('home.html')
+                        document.getElementById('userName').textContent = data.username;
+                        //document.getElementById('userIndex').textContent = data.username.charAt(0).toUpperCase()
+                    }
+                    else{
+                        console.log('not inadmissible')
+                    }
                 })
                 .catch(err => console.log(err))
             }
