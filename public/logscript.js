@@ -52,12 +52,10 @@ function handeleLoginForm(){
                 .then(res =>  res.json())
                 .then((data) => {
                     console.log(data)
-                    //document.getElementById('showLogin').textContent = `${data.message}` ;
+                    localStorage.setItem('username', JSON.stringify(data.username)); 
                     alert(`${data.message} ${data.admission}`)
                     if(data.admission == true){
-                        window.open('home.html')
-                        document.getElementById('userName').textContent = data.username;
-                        //document.getElementById('userIndex').textContent = data.username.charAt(0).toUpperCase()
+                        window.open('/home')
                     }
                     else{
                         console.log('not inadmissible')

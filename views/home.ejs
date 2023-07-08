@@ -14,7 +14,7 @@
     <!--=====================CSS3 File=======================-->
     <link rel="stylesheet" href="style.css">
 
-    <title>Restaurant landing page</title>
+    <title>Restaurant_Menu</title>
 </head>
 
 <body>
@@ -29,25 +29,28 @@
                 <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <div class="btn">
-                                <form class="form-inline my-2 my-lg-0">
-                                    <a href="registerForm.html" target="_blank" class="btn  my-2 my-sm-0">Sign up</a>
-                                </form>
-                            </div>
+                            <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <div class="btn">
-                                <form class="form-inline my-2 my-lg-0">
-                                    <a href="loginForm.html" target="_blank" class="btn  my-2 my-sm-0">Log in</a>
-                                </form>
-                            </div>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#main">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservation">Reservation</a>
+                        </li>
                     </ul>
                 </div>
-                <div >
+                <div class="btn">
                     <form class="form-inline my-2 my-lg-0">
-                        <a href="#" class="btn  my-2 my-sm-0" id="forget">forgot your password?</a>
+                        <div class="user">
+                            <div id="userPhoto" ><span id="userIndex"><i class="fa-solid fa-user"></i></span></div>
+                            <span id="userName"> <%=online%> </span>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -70,7 +73,7 @@
                             <span>Fastest Delivery & Easy pickup</span>
                             <h1>Kings Burger</h1>
                             <p>Good food starts with good gridiants. we only bring you the best</p>
-
+                            <a href="/ordering"><button class="btn  my-2 my-sm-0">Order Now</button></a>
                         </div>
                         <div class="img col-lg-6"><img src="images/slide-1.png" class="d-block w-100" alt="..."></div>
                     </div>
@@ -83,7 +86,7 @@
                                 <span>Fastest Delivery & Easy pickup</span>
                                 <h1>Delicious Food</h1>
                                 <p>Good food starts with good gridiants. we only bring you the best</p>
-                                
+                                <a href="/ordering"><button class="btn  my-2 my-sm-0">Order Now</button></a>
                             </div>
                             <div class="img col-lg-6"><img src="images/slide-2.png" class="d-block w-100" alt="..."></div>
                         </div>
@@ -96,7 +99,7 @@
                                 <span>Fastest Delivery & Easy pickup</span>
                                 <h1>Food Platter</h1>
                                 <p>Good food starts with good gridiants. we only bring you the best</p>
-                                
+                                <a href="/ordering"><button class="btn  my-2 my-sm-0">Order Now</button></a>
                             </div>
                             <div class="img col-lg-6"><img src="images/slide-3.png" class="d-block w-100" alt="..."></div>
                         </div>
@@ -179,12 +182,12 @@
         </div>
     </div>
     <!--=====================End about restaurant section=======================-->
-    <!--=====================Start Menu  section=======================--
+    <!--=====================Start Menu  section=======================-->
     <div class="menus" id="main">
         <h1>Fast Food Nenus</h1>
         <hr>
         <div class="container">
-            
+            <!-----Row 1-->
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="plat">
@@ -235,7 +238,7 @@
                     </div>
                 </div>
             </div>
-            
+            <!---Row 2-->
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="plat">
@@ -318,7 +321,7 @@
                     </div>
                 </div>
             </div>
-            
+            <!---Row 3-->
             <div class="row last">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="plat">
@@ -371,7 +374,7 @@
             </div>
         </div>
     </div>
-    <--=====================End Menu section=======================-->
+    <!--=====================End Menu section=======================-->
     <!--=====================Start Services section=======================-->
     <div class="services" id="services">
         <div class="container">
@@ -432,7 +435,7 @@
         </div>
     </div>
     <!--=====================End Services section=======================-->
-    <!--=====================Start Best Sellers section=======================--
+    <!--=====================Start Best Sellers section=======================-->
     <div class="bestSel">
         <div class="container">
             <div class="row">
@@ -487,8 +490,8 @@
             </div>
         </div>
     </div>
-    <--=====================End Best Sellers section=======================-->
-    <!--=====================Start Reservation section=======================-
+    <!--=====================End Best Sellers section=======================-->
+    <!--=====================Start Reservation section=======================-->
     <div class="reservation" id="reservation">
         <div class="container">
             <div class="row">
@@ -547,14 +550,14 @@
             </div>
         </div>
     </div>
-    <--=====================End Reservation section=======================-->
+    <!--=====================End Reservation section=======================-->
     <!--=====================Start footer  section=======================-->
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="logoo">
-                        <div class="logg"><a class="navbar-brand" href="#"><img src="images/logo1.png" alt=""></a><a href="">SAMOS</a></div>
+                        <div class="logg"><a class="navbar-brand" href="#"><img src="images/logo1.png" alt=""></a><a href="home.html">SAMOS</a></div>
                     </div>
                     <div class="news">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi cupiditate itaque error
@@ -618,7 +621,7 @@
         crossorigin="anonymous"></script>
     <!--=====================JavaScript File=======================-->
     <script src="script.js"></script>
-
+    <script src="logscript.js"></script>
 
 </body>
 

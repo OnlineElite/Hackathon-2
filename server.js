@@ -3,6 +3,8 @@ const bp = require('body-parser');
 const DB = require('./modules/db');
 const knex = require('knex')
 
+
+
 const db = knex({
     client:'pg',
     connection:{
@@ -14,12 +16,36 @@ const db = knex({
     }
 })
 const app = exp();
+app.use(exp.static('public'));
+app.set('view engine', 'ejs');
 
 app.use(bp.urlencoded({ extended: false }))
 app.use(bp.json())
-app.use('/',exp.static(__dirname+'/public'));
 
-const port = 8080;
+const port = 3000;
+// API to render landing page
+app.get('/', (req, res) => {
+    res.render('index') 
+})
+// API to render sign up page
+app.get('/register', (req, res) => {
+    res.render('registerForm') 
+})
+// API to render ordering page
+app.get('/ordering', (req, res) => {
+    res.render('ordering') 
+})
+// API to render log in page
+app.get('/login', (req, res) => {
+    res.render('loginForm') 
+})
+// API to render home page
+// use login API to send online user to home page by ejs
+var onlineUser ;
+app.get('/home', (req, res) => {
+    console.log(`this is online user: ${onlineUser}`)
+    res.render('home', { online: onlineUser }) 
+})
 
 
 // API for register  //**********************************************************//
@@ -39,7 +65,7 @@ app.post('/register',(req,res)=>{
             DB.createUser(req.body)
             .then(data => {
                 res.sendStatus = 200;
-                res.send({message : `Hello your account is now created!`}) //add firstname to the message
+                res.send({message : `Hello ${req.body.firstname} your account is now created!`}) //add firstname to the message
             })
             .catch(err => {
                 res.send({message:err.detail})
@@ -93,10 +119,11 @@ app.post('/login',(req,res)=>{
         .then(data => {
             console.log(data);
             if(data.length>0){
-            res.send({message:`Welcome back: ${data[0].username}  |  User_id: ${data[0].user_id}`, username: data[0].username, admission  : true})
+                onlineUser = data[0].username;
+                res.send({message:`Welcome back: ${data[0].username}  |  User_id: ${data[0].user_id}`, username: data[0].username, admission  : true})
             }
             else {
-            res.send({message : "Hello this account is not registred", admission  : false})
+                res.send({message : "Hello this account is not registred", admission  : false})
             }
         })
         .catch(err => {

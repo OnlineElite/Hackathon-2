@@ -10,9 +10,10 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--=====================CSS3 File=======================-->
     <link rel="stylesheet" href="formstyle.css">
-    <title>Register page</title>
+    <title>Login page</title>
 </head>
 <body>
+
     <!--=====================Start navbar section=======================-->
     <section id="header ">
         <nav class="navbar  navbar-expand-lg ">
@@ -26,14 +27,14 @@
                         <li class="nav-item active">
                             <div class="btn">
                                 <form class="form-inline my-2 my-lg-0">
-                                    <a href="registerForm.html" class="btn  my-2 my-sm-0">Sign up</a>
+                                    <a href="/register" class="btn  my-2 my-sm-0">Sign up</a>
                                 </form>
                             </div>
                         </li>
                         <li class="nav-item">
                             <div class="btn">
                                 <form class="form-inline my-2 my-lg-0">
-                                    <a href="loginForm.html" class="btn  my-2 my-sm-0">Log in</a>
+                                    <a href="/login" class="btn  my-2 my-sm-0">Log in</a>
                                 </form>
                             </div>
                         </li>
@@ -50,18 +51,17 @@
     </section>
     <!--=====================End navbar section=======================-->
     <div id="container">
-        <form id="RegisterForm" action="http://localhost:3000/registerForm " method="GET" target="_blank">
-            <h1>Register :</h1>
-            <div class="ro"><label for="firstname">First name : </label><input type="text" id="firstname" name="firstname"></div>
-            <div class="ro"><label for="lastname">Last name : </label><input type="text" id="lastname" name="lastname"></div>
-            <div class="ro"><label for="email">Email : </label><input type="email" id="email" name="email"></div>
+        <form id="LoginForm" action="/login" method="post" >
+            <h1>Login :</h1>
             <div class="ro"><label for="username">Username : </label><input type="text" id="username" name="username"></div>
             <div class="ro"><label for="password">Password : </label><input type="password" id="password" name="password"></div>
             <hr>
-            <button  id="register" disabled  type="submit">Register</button>
+            <button  id="login" type="submit" disabled>Login</button>
         </form>
-        <!--<div id="showRegister" class="screen"></div>-->
+        <!--<div id="showLogin" class="screen"></div>-->
     </div>
+
+
 
     <!--=====================Start footer  section=======================-->
     <div class="bottomBar"><span>© 2023 SAMOS</span> Food & Resttaurant BBQ</div>
@@ -78,6 +78,6 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <!--=====================JavaScript File=======================-->
-    <script src="regscript.js"></script>
+    <script src="logscript.js"></script>
 </body>
 </html>

@@ -834,3 +834,13 @@ function addAddress() {
         alert("Address not added")
     }
 }
+
+function ShowOnlineUser(){
+    var onlineUser = JSON.parse(localStorage.getItem('username'))
+
+    //show online user in ordering page
+    document.getElementById('onlineUser').textContent = onlineUser;
+  
+}
+ShowOnlineUser();
+
