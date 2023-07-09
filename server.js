@@ -2,7 +2,7 @@ const exp = require('express');
 const bp = require('body-parser');
 const DB = require('./modules/db');
 const knex = require('knex')
-
+const bcrypt = require('bcrypt'); 
 
 
 const db = knex({
@@ -155,6 +155,12 @@ app.post('/login',(req,res)=>{
             if(data.length>0){
                 onlineUser = data[0].username;
                 res.send({message:`Welcome back: ${data[0].username}  |  User_id: ${data[0].user_id}`, username: data[0].username, admission  : true})
+               /* if(bcrypt.compareSync(pass, data[0].password)){  //--------------------------
+                    res.send({message:`Welcome back: ${data[0].username}  |  User_id: ${data[0].user_id}`, username: data[0].username, admission  : true})
+                }
+                else{
+                    res.send({message:'Wrong password'})
+                }*/
             }
             else {
                 res.send({message : "Hello this account is not registred", admission  : false})
