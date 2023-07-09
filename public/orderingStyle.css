@@ -49,8 +49,75 @@ body {
     color: rgb(255, 217, 0);
 }
 
+.menu-item{
+    width: 100%;
+}
+.btnClose, .btnSave{
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border:2px solid white;
+    padding: 5px;
+}
+.btnSave{
+    background-color: rgb(250, 3, 65);
+}
+.menu-item .btn{
+    background-color: rgb(250, 3, 65);
+    color: white;
+    width: 95%;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border:2px solid white;
+    margin-left: 5px;
+}
+.menu-item .btn:hover , .btnClose:hover, .btnSave:hover{
+    background-color: rgb(255, 217, 0);
+}
+
 .menu-item a:hover {
     background-color: rgb(250, 3, 65);
+
+}
+
+/*----------modal---------*/
+.modal h3{
+    width: 100%;
+    text-align: center;
+    color:rgb(250, 3, 65) ;
+}
+.modal-content{
+    background-color: rgb(255, 217, 0);
+    border-radius: 8px;
+}
+.modal-body{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.modal-body .roo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+.modal-body .roo label{
+    width: fit-content;
+    color: rgb(34, 47, 62);
+    font-size: 18px;
+    font-weight: bold;
+}
+.modal-body .roo input{
+    background-color: rgb(34, 47, 62);
+    width: 80%;
+    font-size: 18px;
+    color: white ;
+    border-radius: 8px;
+padding: 5px;
 }
 /*----------------food-content section------------------------*/
 .food-content{

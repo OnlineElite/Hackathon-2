@@ -341,7 +341,7 @@ const foodItem = [
     },
 ]
 
-// fetch all Items from database
+// fetch all Items from database-----------------------------------//
 function getItems(){
     fetch('/getItems')
     .then(res =>  res.json())
@@ -357,16 +357,32 @@ function getItems(){
 getItems();
 console.log(foodItem)
 
-// fetch an Item to database
-document.getElementById('check').addEventListener('click',addItems)
-
+// fetch an Item to database-----------------------------------------//
+document.getElementById('addItem').addEventListener('click',addItems)
 async function addItems(e){
     e.preventDefault()
+    var values = [];
+    const ids = ['item_id', 'name', 'Category', 'Rating', 'price', 'img', 'quantity']
+    const inputs = ids.map((id) => document.getElementById(id))
+    inputs.forEach((inp) => { values.push(inp.value) })
     
+    const itemInfo = {
+        id: values[0],
+        name: values[1],
+        category: values[2],
+        rating: values[3],
+        price: values[4],
+        img: values[5],
+        quantity: values[6]
+    }
+    const newItem =[]
+    newItem.push(itemInfo)   
+    console.log(newItem)
+    // fetch method to sent data
     await fetch('/addItem',  {
     method: 'POST',
     headers: { 'Content-Type':'application/json'},
-    body: JSON.stringify({items: foodItem})
+    body: JSON.stringify({items: newItem})
     })
     .then(res =>  res.json())
     .then((data) => {
@@ -374,9 +390,11 @@ async function addItems(e){
         alert(data.message)
     })
     .catch(err => console.log(err))
+
+    inputs.forEach((inp) => { inp.value = '' })
 }
 
-// display all Items in the page
+// display all Items in the page----------------------------------------//
 function displayItems() {
     var burger = document.getElementById('Burger');
     var platter = document.getElementById('platter');;
@@ -875,14 +893,12 @@ function addAddress() {
         alert("Address not added")
     }
 }
-
+// show online user in ordering page------------------------------------//
 function ShowOnlineUser(){
     var onlineUser = JSON.parse(localStorage.getItem('username'))
     //show online user in ordering page
     document.getElementById('onlineUser').textContent = onlineUser;
 }
 ShowOnlineUser();
-
-
 
 
