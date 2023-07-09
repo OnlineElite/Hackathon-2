@@ -53,7 +53,7 @@ const foodItem = [
         img: 'images/slide-1.png',
         quantity: 1
     },
-    /*--------------------------------------------------------------------------*/
+    //--------------------------------------------------------//
     {
         id: 7,
         name: 'Chicken Roast',
@@ -116,7 +116,7 @@ const foodItem = [
         price: 15,
         img: 'images/slide-2.png',
         quantity: 1
-        /*--------------------------------------------------------------------------*/
+        //-------------------------------------------------------------------------//
     },
     {
         id: 14,
@@ -165,7 +165,7 @@ const foodItem = [
         img: 'images/slide-3.png',
         quantity: 1
     },
-    /*--------------------------------------------------------------------------------*/
+    //--------------------------------------------------------------------------------//
     {
         id: 19,
         name: 'Navratan Korma',
@@ -229,7 +229,7 @@ const foodItem = [
         img: 'images/slideHamberger.png',
         quantity: 1
     },
-    /*--------------------------------------------------------------------------*/
+    //--------------------------------------------------------------------------//
     {
         id: 26,
         name: 'Momos',
@@ -284,7 +284,7 @@ const foodItem = [
         img: 'images/slide-4.png',
         quantity: 1
     },
-    /*-----------------------------------------------------------------------*/
+    //-----------------------------------------------------------------------//
     {
         id: 32,
         name: 'Butter Masala',
@@ -341,6 +341,42 @@ const foodItem = [
     },
 ]
 
+// fetch all Items from database
+function getItems(){
+    fetch('/getItems')
+    .then(res =>  res.json())
+    .then((data) => {
+        
+        console.log({info : 'from database' ,arrayx: data}) // data is an array of objects
+        data.forEach((item) =>{
+            foodItem.push(item)
+        })
+    })
+    .catch(err => console.log(err))
+}
+getItems();
+console.log(foodItem)
+
+// fetch an Item to database
+document.getElementById('check').addEventListener('click',addItems)
+
+async function addItems(e){
+    e.preventDefault()
+    
+    await fetch('/addItem',  {
+    method: 'POST',
+    headers: { 'Content-Type':'application/json'},
+    body: JSON.stringify({items: foodItem})
+    })
+    .then(res =>  res.json())
+    .then((data) => {
+        console.log(data)
+        alert(data.message)
+    })
+    .catch(err => console.log(err))
+}
+
+// display all Items in the page
 function displayItems() {
     var burger = document.getElementById('Burger');
     var platter = document.getElementById('platter');;
@@ -659,7 +695,7 @@ function addToCart() {
     cartItems();
 }
 
-
+var order = {}
 function cartItems() {
     var tableBody = document.getElementById('table-body');
     tableBody.innerHTML = '';
@@ -696,7 +732,12 @@ function cartItems() {
         tableRow.appendChild(rowData2);
         tableRow.appendChild(rowData3);
         tableRow.appendChild(rowData4);
-
+        order = {
+            img : item.img,
+            name : item.name,
+            quantity : item.quantity,
+            price : item.price
+        }
         tableBody.appendChild(tableRow);
     })
     document.querySelectorAll('.increase-item').forEach(item => {
@@ -837,10 +878,11 @@ function addAddress() {
 
 function ShowOnlineUser(){
     var onlineUser = JSON.parse(localStorage.getItem('username'))
-
     //show online user in ordering page
     document.getElementById('onlineUser').textContent = onlineUser;
-  
 }
 ShowOnlineUser();
+
+
+
 

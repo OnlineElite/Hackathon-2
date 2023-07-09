@@ -23,6 +23,40 @@ app.use(bp.urlencoded({ extended: false }))
 app.use(bp.json())
 
 const port = 3000;
+
+// API to add Items into database
+app.post('/addItem', (req, res) => {
+    console.log(req.body.items);
+    const promises = req.body.items.map(item => {
+        return DB.createItem(item); // Assuming createItem executes the SQL insert query
+    });
+
+    Promise.all(promises)
+        .then(data => {
+            console.log({ message: 'Items added successfully', response: data });
+            res.status(200).send({ message: `Items added successfully` });
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).send({ message: 'Internal server error' });
+        });
+});
+
+// API to get All Items from database
+app.get('/getItems', (req, res)=>{
+    db('fooditems')
+        .select('*')
+        .then(data => {
+            console.log({message:'data reseved from database', items: data});
+            res.send(data)
+        })
+        .catch(err => {
+            console.log(err);
+            res.send({message:err.detail})
+        })
+})
+
+
 // API to render landing page
 app.get('/', (req, res) => {
     res.render('index') 

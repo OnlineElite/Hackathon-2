@@ -25,6 +25,34 @@ function createUser({firstname,lastname,email,username,password}){
   .returning('*')
 }
 
+function createItem(data){
+  //data.items.forEach(data => {
+   /*console.log(`im inserting into db this data: 
+    ${data.id} , 
+    ${data.name} , 
+    ${data.category} ,
+    ${data.rating}, 
+    ${data.price},
+    ${data.img}, 
+    ${data.quantity}`)*/
+    return db('fooditems').insert( 
+      {
+        item_id : data.id,
+        name : data.name,
+        category : data.category,
+        rating : data.rating,
+        price : data.price,
+        img : data.img,
+        quantity : data.quantity
+      }
+    )
+    .returning('*')
+  //});
+   
+  
+}
+
 module.exports = {
-  createUser
+  createUser,
+  createItem
 }

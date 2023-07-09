@@ -59,11 +59,15 @@ function handeleLoginForm(){
                     }
                     else{
                         console.log('not inadmissible')
+
                     }
                 })
                 .catch(err => console.log(err))
             }
             fetchData();
+            inputs.forEach((inp) => {
+                inp.value = ''
+            })
         })
     }
     sendData();   
